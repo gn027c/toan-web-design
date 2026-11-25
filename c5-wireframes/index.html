@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Quoc Toan - Capstone Portfolio Wireframes & Design Architecture</title>
+    <style>
+        :root {
+            --bg-body: #0a0f1d;
+            --bg-surface: #131b2e;
+            --bg-card: #1c2742;
+            --text-heading: #f8fafc;
+            --text-body: #94a3b8;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --border-line: #243456;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.6;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .meta-info {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        section {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-line);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p, ul {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .wireframe-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .wireframe-card h3 {
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .mockup-box {
+            background-color: #0d1527;
+            border: 2px dashed #334155;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .mock-block {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            padding: 0.6rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .mock-nav { background-color: #1e3a8a; color: #93c5fd; }
+        .mock-hero { background-color: #065f46; color: #a7f3d0; height: 70px; display: flex; align-items: center; justify-content: center; }
+        .mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .mock-footer { background-color: #0f172a; color: #64748b; }
+
+        .palette-strip {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .color-chip {
+            flex: 1;
+            min-width: 140px;
+            padding: 1.25rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Phan Quoc Toan — Personal Web Portfolio Wireframes</h1>
+            <p class="subtitle">Capstone Project (Option 1: Designed from Scratch) — University of Michigan</p>
+            <p class="meta-info">Author: Phan Quoc Toan &bull; Specialization: Web Design for Everybody &bull; Long An, Vietnam</p>
+        </header>
+
+        <section id="intent">
+            <h2>Site Architecture & Strategy</h2>
+            <p>This document presents the responsive wireframes, design rationale, and layout strategy for my professional web developer portfolio. The website is crafted from scratch using semantic HTML5, custom responsive CSS3, and modern accessible UI patterns.</p>
+            <ul>
+                <li><strong>Target Audience:</strong> Technical recruiters, engineering hiring managers, open-source collaborators, and academic evaluators.</li>
+                <li><strong>Core Objective:</strong> Showcase mastery of responsive layout, DOM interactivity, WCAG 2.1 AA accessibility standards, and clean frontend architecture.</li>
+                <li><strong>Accessibility Commitment:</strong> 100% keyboard navigable, high-contrast text ratios (&gt; 4.5:1), descriptive alt attributes, and reduced-motion considerations.</li>
+            </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>Responsive Layout Wireframes</h2>
+            <div class="wireframe-grid">
+                <!-- Mobile Wireframe -->
+                <div class="wireframe-card">
+                    <h3>Mobile Viewport (&lt; 640px)</h3>
+                    <div class="mockup-box" style="max-width: 280px; margin: 0 auto;">
+                        <div class="mock-block mock-nav">Header &bull; Vertical Menu</div>
+                        <div class="mock-block mock-hero">Hero: Intro &amp; Photo</div>
+                        <div class="mock-block">Bio &amp; Education Summary</div>
+                        <div class="mock-block">Skills (Vertical List)</div>
+                        <div class="mock-block">Projects (1-Col Cards)</div>
+                        <div class="mock-block">Contact Form</div>
+                        <div class="mock-block mock-footer">Footer &amp; Social Links</div>
+                    </div>
+                </div>
+
+                <!-- Tablet Wireframe -->
+                <div class="wireframe-card">
+                    <h3>Tablet Viewport (640px - 1024px)</h3>
+                    <div class="mockup-box">
+                        <div class="mock-block mock-nav">Header with Horizontal Navbar</div>
+                        <div class="mock-block mock-hero">Hero Section (2-Col Intro)</div>
+                        <div class="mock-grid">
+                            <div class="mock-block">Skills (Grid)</div>
+                            <div class="mock-block">Experience</div>
+                        </div>
+                        <div class="mock-grid">
+                            <div class="mock-block">Project Card 1</div>
+                            <div class="mock-block">Project Card 2</div>
+                        </div>
+                        <div class="mock-block">Contact &bull; 2-Column Fields</div>
+                        <div class="mock-block mock-footer">Footer</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Wireframe -->
+                <div class="wireframe-card">
+                    <h3>Desktop Viewport (&gt; 1024px)</h3>
+                    <div class="mockup-box">
+                        <div class="mock-block mock-nav">Sticky Nav &bull; Logo Left &bull; Links Right</div>
+                        <div class="mock-block mock-hero" style="height: 90px;">Hero: Split Headline &amp; Interactive Showcase</div>
+                        <div class="mock-block">About Me &amp; Technical Competencies</div>
+                        <div class="mock-grid" style="grid-template-columns: repeat(3, 1fr);">
+                            <div class="mock-block">Project 1</div>
+                            <div class="mock-block">Project 2</div>
+                            <div class="mock-block">Project 3</div>
+                        </div>
+                        <div class="mock-block">Contact Grid with Direct Inquiry Channels</div>
+                        <div class="mock-block mock-footer">Footer with Copyright &amp; Academic Attribution</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design-system">
+            <h2>Design System & Color Tokens</h2>
+            <p>A sophisticated dark aesthetic inspired by modern developer ecosystems, ensuring optimal visual clarity and reduced eye strain.</p>
+            <div class="palette-strip">
+                <div class="color-chip" style="background-color: #0a0f1d; color: #f8fafc; border: 1px solid #243456;">
+                    Deep Navy<br>#0A0F1D
+                </div>
+                <div class="color-chip" style="background-color: #131b2e; color: #f8fafc; border: 1px solid #243456;">
+                    Surface Slate<br>#131B2E
+                </div>
+                <div class="color-chip" style="background-color: #06b6d4; color: #082f49;">
+                    Cyan Accent<br>#06B6D4
+                </div>
+                <div class="color-chip" style="background-color: #10b981; color: #022c22;">
+                    Emerald Mint<br>#10B981
+                </div>
+                <div class="color-chip" style="background-color: #f8fafc; color: #0f172a;">
+                    Primary Text<br>#F8FAFC
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Phan Quoc Toan &bull; Capstone Project Week Two Wireframes Submission</p>
+        </footer>
+    </div>
+</body>
+</html>
