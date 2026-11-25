@@ -1,0 +1,160 @@
+/* Mekong Delta Avian Sanctuary - Responsive Photo Gallery Stylesheet */
+:root {
+    --bg-main: #0b1320;
+    --bg-card: #141f32;
+    --text-heading: #f1f5f9;
+    --text-body: #cbd5e1;
+    --accent-sky: #38bdf8;
+    --accent-indigo: #818cf8;
+    --border-color: #1e293b;
+    --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+.gallery-header {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 2.5rem;
+}
+
+.gallery-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-sky);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.lead {
+    font-size: 1.05rem;
+    color: #94a3b8;
+}
+
+.gallery-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* 1. Mobile First: 1 Column */
+.responsive-gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.gallery-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0f172a;
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .image-wrapper img {
+    transform: scale(1.04);
+}
+
+figcaption {
+    padding: 1.25rem 1.5rem;
+}
+
+figcaption h3 {
+    font-size: 1.2rem;
+    color: var(--text-heading);
+    margin-bottom: 0.4rem;
+}
+
+figcaption p {
+    font-size: 0.925rem;
+    color: #94a3b8;
+}
+
+.gallery-footer {
+    text-align: center;
+    padding-top: 3rem;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+/* ========================================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================================== */
+
+/* Tablet Breakpoint: 2 Columns (min-width: 600px) */
+@media screen and (min-width: 600px) {
+    body {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .responsive-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .image-wrapper img {
+        height: 220px;
+    }
+}
+
+/* Desktop Breakpoint: 3 Columns (min-width: 900px) */
+@media screen and (min-width: 900px) {
+    .responsive-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+    .gallery-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-sky);
+        box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.2);
+    }
+
+    .image-wrapper img {
+        height: 250px;
+    }
+}
+
+/* Print View */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .responsive-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+}

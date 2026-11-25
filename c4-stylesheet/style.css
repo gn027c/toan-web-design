@@ -1,0 +1,264 @@
+/* Vam Co Agro-Forestry - Responsive Stylesheet */
+:root {
+    --bg-dark: #081210;
+    --bg-panel: #11221c;
+    --text-primary: #ecfdf5;
+    --text-muted: #94a3b8;
+    --accent-teal: #14b8a6;
+    --accent-emerald: #10b981;
+    --border-subtle: #1b382e;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+}
+
+/* 1. Header & Navigation: Mobile First (Vertical column) */
+.site-header {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-teal);
+    text-align: center;
+}
+
+.responsive-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.responsive-nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.responsive-nav a:hover,
+.responsive-nav a:focus {
+    background-color: var(--border-subtle);
+    color: var(--accent-emerald);
+    outline: none;
+}
+
+/* 2. Main Content & Hero */
+.main-content {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0d2820 0%, #11221c 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 1.85rem;
+    color: #34d399;
+    margin-bottom: 0.75rem;
+}
+
+.hero-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* 3. Cards Section: Mobile Single Column */
+.grid-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--accent-teal);
+    margin-bottom: 0.6rem;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* 4. Ecological Zoning Matrix */
+.zone-section {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.zone-section h2 {
+    text-align: center;
+    color: #34d399;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.zone-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.zone-box {
+    padding: 1.25rem;
+    border-radius: 10px;
+}
+
+.zone-core {
+    background-color: #071f18;
+    border-left: 4px solid var(--accent-emerald);
+}
+
+.zone-buffer {
+    background-color: #0d2621;
+    border-left: 4px solid var(--accent-teal);
+}
+
+.zone-box h4 {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.zone-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* 5. Footer */
+.site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #64748b;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 3rem;
+}
+
+/* ========================================================
+   RESPONSIVE MEDIA QUERIES (Breakpoints)
+   ======================================================== */
+
+/* Tablet Breakpoint (min-width: 640px) */
+@media screen and (min-width: 640px) {
+    body {
+        padding: 2rem;
+    }
+
+    .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .responsive-nav ul {
+        flex-direction: row;
+        gap: 1rem;
+        width: auto;
+    }
+
+    .grid-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .zone-container {
+        flex-direction: row;
+    }
+
+    .zone-box {
+        flex: 1;
+    }
+}
+
+/* Desktop Breakpoint (min-width: 960px) */
+@media screen and (min-width: 960px) {
+    .hero-section {
+        padding: 3rem 2.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2.4rem;
+    }
+
+    .grid-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent-emerald);
+    }
+}
+
+/* Print Media Query */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .site-header, .site-footer {
+        display: none;
+    }
+    .card, .hero-section, .zone-section {
+        border: 1px solid #cccccc;
+        box-shadow: none;
+    }
+}
