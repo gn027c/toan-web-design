@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mekong Delta Biodiversity & Eco-Conservation Guide by Phan Quoc Toan - University of Michigan HTML5 Accessible Project.">
+  <title>Mekong Delta Biodiversity & Eco-Conservation - Phan Quoc Toan</title>
+  <style>
+    :root {
+      --primary: #1b4332;
+      --secondary: #2d6a4f;
+      --accent: #52b788;
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card-bg: #ffffff;
+      --border: #d8f3dc;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #ffffff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    nav {
+      background-color: #ffffff;
+      border-bottom: 2px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    nav a:hover, nav a:focus {
+      color: var(--primary);
+      background-color: var(--border);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    h3 {
+      color: var(--secondary);
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+    }
+    figure {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background-color: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #d8f3dc;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Mekong Delta Eco-Conservation Guide</h1>
+    <p>Documenting Wetland Biodiversity &amp; Community-Led Sustainability Initiatives</p>
+    <p><small>Authored by Phan Quoc Toan &bull; University of Michigan Web Design Specialization</small></p>
+  </header>
+
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#overview">Ecosystem Overview</a></li>
+      <li><a href="#species">Key Wetland Species</a></li>
+      <li><a href="#initiatives">Conservation Initiatives</a></li>
+      <li><a href="#guidelines">Eco-Friendly Guidelines</a></li>
+      <li><a href="#resources">Academic Resources</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section id="overview">
+      <h2>1. The Mekong Delta Biosphere</h2>
+      <p>
+        The Mekong River Delta in southern Vietnam encompasses one of the world's most productive and biodiverse wetland ecosystems. Covering over 40,000 square kilometers across thirteen provinces, the delta supports complex aquatic food webs, rich alluvial mangrove forests, and expansive seasonal floodplains.
+      </p>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Serene waterways of the Mekong Delta with lush green mangrove forests along the river banks" width="900" height="500">
+        <figcaption>Figure 1: Typical riverine mangrove canal system in the lower Mekong basin.</figcaption>
+      </figure>
+      <p>
+        Rising tidal amplitudes and seasonal monsoonal deposits create a dynamic brackish-freshwater gradient, offering vital breeding grounds for migratory waterbirds, native freshwater fish, and endangered reptile populations.
+      </p>
+    </section>
+
+    <section id="species">
+      <h2>2. Key Biodiversity &amp; Indicator Species</h2>
+      <p>
+        Ecologists monitor several indicator species to assess the hydrological and biological health of regional wetland sanctuaries like Tram Chim National Park and Lang Sen Wetland Reserve:
+      </p>
+      <h3>Avian and Aquatic Highlights</h3>
+      <ul>
+        <li><strong>Sarus Crane (Grus antigone):</strong> The tallest flying bird in the world, serving as a flagship species for the preservation of seasonal Eleocharis grasslands.</li>
+        <li><strong>Irrawaddy Dolphin (Orcaella brevirostris):</strong> Occasional riverine mammal navigating estuary channels with high conservation priority.</li>
+        <li><strong>Giant Freshwater Stingray (Urogymnus polylepis):</strong> Megafauna inhabiting deep river pools along the Mekong mainstream.</li>
+        <li><strong>Mangrove Apple (Sonneratia caseolaris):</strong> Keystone pioneer tree species that stabilizes riverbanks against saltwater intrusion.</li>
+      </ul>
+    </section>
+
+    <section id="initiatives">
+      <h2>3. Conservation Initiatives in Southern Vietnam</h2>
+      <p>
+        Local universities, forestry management boards, and international environmental organizations collaborate on structured sustainability programs:
+      </p>
+      <ol>
+        <li><strong>Hydrological Restoration:</strong> Restoring natural flood regimes inside protected dikes to stimulate native reed regeneration.</li>
+        <li><strong>Mangrove Belt Afforestation:</strong> Planting coastal Rhizophora mangroves along coastal defense zones in Ca Mau and Ben Tre.</li>
+        <li><strong>Community Agro-forestry:</strong> Promoting integrated mangrove-shrimp and rice-fish farming systems that minimize artificial chemical runoff.</li>
+        <li><strong>Environmental Education:</strong> Conducting interactive workshops with primary schools and river communities on water security and plastic reduction.</li>
+      </ol>
+    </section>
+
+    <section id="guidelines">
+      <h2>4. Eco-Visitor Guidelines</h2>
+      <p>
+        Visitors exploring wetland sanctuaries must adhere strictly to low-impact ecotourism protocols:
+      </p>
+      <ul>
+        <li>Maintain quiet engine speeds along small natural canals to prevent wake erosion.</li>
+        <li>Never disturb nesting colonies or remove native plant cuttings.</li>
+        <li>Carry all non-biodegradable waste back to municipal collection stations.</li>
+        <li>Support community homestays and certified sustainable local boat operators.</li>
+      </ul>
+    </section>
+
+    <section id="resources">
+      <h2>5. References &amp; Educational Resources</h2>
+      <p>
+        For further reading on Mekong Delta ecological dynamics, consult the following authoritative resources:
+      </p>
+      <ul>
+        <li><a href="https://www.worldwildlife.org/places/greater-mekong" target="_blank" rel="noopener noreferrer">World Wildlife Fund (WWF) - Greater Mekong Ecosystem</a></li>
+        <li><a href="https://www.ramsar.org/" target="_blank" rel="noopener noreferrer">Ramsar Convention on Wetlands of International Importance</a></li>
+        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C HTML5 Markup Validation Service</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Phan Quoc Toan. Built from scratch for Coursera: Introduction to HTML5 (University of Michigan).</p>
+    <p>Adheres to WCAG 2.1 AA accessibility guidelines, semantic markup standards, and responsive design.</p>
+  </footer>
+</body>
+</html>
