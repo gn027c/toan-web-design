@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vam Co River Ecology - Interactive Specimen Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body>
+    <header class="gallery-header">
+        <h1>Vam Co River Basin Wetland Ecology</h1>
+        <p class="subtitle">Interactive Botanical & Ornithological Specimen Showcase — Phan Quoc Toan</p>
+    </header>
+
+    <main class="gallery-container">
+        <!-- Interactive display showcase area required by Coursera rubric -->
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <section class="thumbnail-strip" aria-label="Specimen thumbnails">
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?auto=format&fit=crop&w=800&q=80" 
+                     alt="Sacred Lotus Bloom (Nelumbo nucifera) in wetland floodwaters" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Sacred Lotus (Nelumbo nucifera)</figcaption>
+            </figure>
+
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" 
+                     alt="Melaleuca Cajuputi Forest Canopy along canal waterway" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Melaleuca Forest Canopy</figcaption>
+            </figure>
+
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" 
+                     alt="Morning mist rising above submerged wetland marsh vegetation" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Submerged Marshland</figcaption>
+            </figure>
+
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+                     alt="Alluvial sandbar and tranquil freshwater delta horizon" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Alluvial Sandbar</figcaption>
+            </figure>
+
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" 
+                     alt="Dense aquatic fern and duckweed floating on alluvial estuary" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Floating Estuary Flora</figcaption>
+            </figure>
+
+            <figure class="thumbnail-card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                     alt="Perennial wetland river bend during high autumn tide" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()">
+                <figcaption>Autumn Flood Channel</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="gallery-footer">
+        <p>&copy; 2026 Phan Quoc Toan — Web Design for Everybody Specialization (Course 3: Interactivity with JavaScript)</p>
+    </footer>
+</body>
+</html>

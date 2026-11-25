@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long An Traditional Crafts & Mekong Agro-Heritage - Accessible Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
+</head>
+<body onload="initializeGallery()">
+    <header class="header">
+        <h1>Long An Traditional Rural Crafts & Agro-Heritage</h1>
+        <p class="lead">Fully Accessible Interactive Specimen Exhibition with Keyboard Navigation</p>
+    </header>
+
+    <main class="container">
+        <!-- Main display element required by Coursera rubric -->
+        <div id="image" aria-live="polite">
+            Hover over or tab to an image below to display here.
+        </div>
+
+        <section class="gallery-grid" aria-label="Craft and agriculture thumbnails">
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&w=800&q=80" 
+                     alt="Hand-woven sedge mats from Long An craft villages drying under sunlight" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Hand-Woven Sedge Matting</div>
+            </div>
+
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" 
+                     alt="Artisanal pottery and clay fermentation vessels for Delta fish sauce" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Artisanal Ceramic Vessels</div>
+            </div>
+
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" 
+                     alt="Traditional bamboo fish traps and hand-woven river basketry" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Bamboo River Basketry</div>
+            </div>
+
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80" 
+                     alt="Sun-dried dragon fruit slices from Chau Thanh plantation orchards" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Chau Thanh Dragon Fruit</div>
+            </div>
+
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" 
+                     alt="Golden fragrant rice sheaves harvested during the winter-spring crop" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Winter-Spring Rice Harvest</div>
+            </div>
+
+            <div class="card">
+                <img class="preview" 
+                     src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=800&q=80" 
+                     alt="Hand-distilled herbal melaleuca essential oil in traditional glass flasks" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <div class="card-caption">Melaleuca Essential Distillation</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Phan Quoc Toan — Accessible Photo Gallery Portfolio (Course 3 Final Project)</p>
+    </footer>
+</body>
+</html>
