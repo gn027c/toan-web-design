@@ -1,0 +1,208 @@
+/* 
+   Homework Two: Advanced Selectors and Display
+   Student: Phan Quoc Toan
+   Course: Introduction to CSS3 - University of Michigan
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #99f6e4;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Flexbox Navigation */
+nav {
+  background-color: #134e4a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Child selector & Pseudo-classes */
+.nav-menu > .nav-item > a.nav-link {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-menu > .nav-item > a.nav-link:hover {
+  background-color: #0f766e;
+  transform: translateY(-1px);
+}
+
+.nav-menu > .nav-item > a.nav-link:focus {
+  outline: 2px solid #5eead4;
+  outline-offset: 2px;
+}
+
+.nav-menu > .nav-item > a.nav-link:active {
+  background-color: #115e59;
+  transform: translateY(0);
+}
+
+/* Attribute selector */
+a[target="_blank"]::after {
+  content: " \2197";
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1050px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #0f766e;
+  font-size: 1.6rem;
+  margin-top: 0;
+  border-bottom: 2px solid #ccfbf1;
+  padding-bottom: 0.5rem;
+}
+
+/* CSS Grid for Specimen Catalog */
+.specimen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.specimen-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.specimen-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.specimen-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.specimen-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+  color: #115e59;
+}
+
+.tag {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+  margin: 0 0 0.5rem 0;
+}
+
+.specimen-card p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+.btn-more {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #0f766e;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+}
+
+.btn-more:hover {
+  background-color: #115e59;
+}
+
+/* Nth-child styling on lists */
+.attribute-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.attribute-list li {
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.attribute-list li:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+.attribute-list li:nth-child(even) {
+  background-color: #f0fdfa;
+  border-left: 3px solid #0f766e;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+}

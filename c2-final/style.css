@@ -1,0 +1,255 @@
+/* 
+   Final Project: Create Your Site
+   Student: Phan Quoc Toan
+   Course: Introduction to CSS3 - University of Michigan
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #1e293b;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Skip to Main Content - Accessible: Hidden by default, visible on focus */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: #047857;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid #f59e0b;
+}
+
+header {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%);
+  color: #ffffff;
+  padding: 2.75rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.4rem;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+.site-desc {
+  font-size: 1.15rem;
+  color: #a7f3d0;
+  margin: 0;
+}
+
+/* Accessible Navigation */
+nav {
+  background-color: #064e3b;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background-color: #047857;
+  color: #ffffff;
+  outline: 2px solid #a7f3d0;
+  outline-offset: 2px;
+}
+
+.nav-link.active {
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+main {
+  max-width: 1080px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.content-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #064e3b;
+  font-size: 1.7rem;
+  margin-top: 0;
+  border-bottom: 2px solid #a7f3d0;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: #047857;
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0.85rem 0;
+}
+
+/* Flexbox layout for hero banner */
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero-text {
+    flex: 1;
+  }
+  .hero-media {
+    flex: 1;
+  }
+}
+
+.hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+/* Grid Layout for Gallery (6 items) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  border: 1px solid #cbd5e1;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #334155;
+  margin: 0;
+}
+
+/* Flora details layout */
+.specimen-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0 0;
+}
+
+.specimen-row {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .specimen-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .specimen-thumb {
+    width: 180px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.specimen-thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.specimen-info {
+  flex-grow: 1;
+}
+
+/* Accessible Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+}
+
+footer a {
+  color: #047857;
+  text-decoration: underline;
+}
