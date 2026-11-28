@@ -1,15 +1,36 @@
 /* 
    Homework Two: Advanced Selectors and Display
-   Student: Phan Quoc Toan
+   Learner: Phan Quoc Toan (toanqp.longan@gmail.com)
    Course: Introduction to CSS3 - University of Michigan
+   Theme: Mekong Delta & Vam Co River Wetland Ecology
 */
 
 * {
   box-sizing: border-box;
 }
 
+/* Skip to Main Content Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background: #0f4c47;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 3px solid #f59e0b;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
   color: #1e293b;
   background-color: #f1f5f9;
@@ -18,7 +39,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  background: linear-gradient(135deg, #0f4c47 0%, #115e59 100%);
   color: #ffffff;
   padding: 2.5rem 1.5rem;
   text-align: center;
@@ -31,110 +52,153 @@ header h1 {
 }
 
 header p {
-  color: #99f6e4;
+  color: #ccfbf1;
   margin: 0;
   font-size: 1.1rem;
 }
 
-/* Flexbox Navigation */
+/*
+  Commented out li styling as required by Homework Two instructions:
+li {
+  display: inline;
+  padding: 5px;
+}
+*/
+
+/* 
+  Navigation Requirement:
+  Change the nav element to use inline-block and have a width of about 80%.
+*/
 nav {
+  display: inline-block;
+  width: 80%;
   background-color: #134e4a;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1.5rem;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  vertical-align: middle;
 }
 
-.nav-menu {
-  list-style: none;
+/*
+  Descendant Selector Requirement:
+  Use a descendant selector to style only the image in the nav to have a width of about 10%.
+*/
+nav img {
+  width: 10%;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.nav-links {
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 0;
 }
 
-/* Child selector & Pseudo-classes */
-.nav-menu > .nav-item > a.nav-link {
+.nav-links a {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-.nav-menu > .nav-item > a.nav-link:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   background-color: #0f766e;
-  transform: translateY(-1px);
-}
-
-.nav-menu > .nav-item > a.nav-link:focus {
   outline: 2px solid #5eead4;
-  outline-offset: 2px;
-}
-
-.nav-menu > .nav-item > a.nav-link:active {
-  background-color: #115e59;
-  transform: translateY(0);
-}
-
-/* Attribute selector */
-a[target="_blank"]::after {
-  content: " \2197";
-  font-size: 0.85em;
-  opacity: 0.8;
 }
 
 main {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
 
 .card {
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 2rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1.75rem;
   margin-bottom: 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
-  color: #0f766e;
+  color: #0f4c47;
   font-size: 1.6rem;
   margin-top: 0;
-  border-bottom: 2px solid #ccfbf1;
+  border-bottom: 2px solid #99f6e4;
   padding-bottom: 0.5rem;
 }
 
-/* CSS Grid for Specimen Catalog */
-.specimen-grid {
+h3 {
+  color: #115e59;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/*
+  Grid Requirement:
+  Style the grid class to use a two column grid where each column is approximately 40%.
+  Adjust justify-content, align-items, and row-gap to copy sample layout.
+*/
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: start;
+  row-gap: 25px;
   margin-top: 1.5rem;
 }
 
-.specimen-card {
+/*
+  Descendant Selector for Grid Images Requirement:
+  Use the descendant selector to style only the images in the grid class to have a width of 100%.
+*/
+.grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.grid-item {
   background-color: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 1.25rem;
+}
+
+/*
+  Flex Requirement:
+  Style the flex class to use flex. Play with flex-wrap and justify-content.
+*/
+.flex {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.specimen-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.flex-item {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
 }
 
-.specimen-thumb {
+.flex-item img {
   width: 100%;
   height: 160px;
   object-fit: cover;
@@ -142,68 +206,12 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-.specimen-card h3 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.15rem;
-  color: #115e59;
-}
-
-.tag {
-  font-size: 0.85rem;
-  color: #64748b;
-  font-style: italic;
-  margin: 0 0 0.5rem 0;
-}
-
-.specimen-card p {
-  font-size: 0.95rem;
-  margin: 0 0 1rem 0;
-  flex-grow: 1;
-}
-
-.btn-more {
-  display: inline-block;
-  align-self: flex-start;
-  background-color: #0f766e;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 0.4rem 0.85rem;
-  border-radius: 4px;
-}
-
-.btn-more:hover {
-  background-color: #115e59;
-}
-
-/* Nth-child styling on lists */
-.attribute-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
-}
-
-.attribute-list li {
-  padding: 0.85rem 1rem;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.attribute-list li:nth-child(odd) {
-  background-color: #f8fafc;
-}
-
-.attribute-list li:nth-child(even) {
-  background-color: #f0fdfa;
-  border-left: 3px solid #0f766e;
-}
-
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  color: #64748b;
-  font-size: 0.9rem;
-  border-top: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.95rem;
+  border-top: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  margin-top: 3rem;
 }
-
